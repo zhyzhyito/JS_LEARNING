@@ -1,17 +1,158 @@
-*{
+
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #afa5a5;
     font-family: Arial, sans-serif;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.logo span{
+    color: #975e5e;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cebcbc;
+    color: #fff;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 
 }
-h1{
-    color: #333;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 35px;
-    
+.nav-links a:hover {
+        background-color: #fff;
+        color: #0c0808;
+        transition: all 0.3s ease;
+        padding: 10px 20px;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 20px;
+}
+
+/* ANIMATION TO X */
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+
+    .logo{
+        margin-right: auto;
+    }
+
+    .navbar {
+        position: relative;
+        justify-content: flex-start;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #cebcbc;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 100;
+
+    }
+    .nav-links a:hover {
+        background-color: #fff;
+        color: #0c0808;
+        transition: all 0.3s ease;
+        padding: 10px 20px;
+        margin: 5px 0;
+
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }

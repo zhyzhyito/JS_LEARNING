@@ -6,18 +6,33 @@
     <link rel="stylesheet" href="/CSS/index.css">
     <title>TECHCOMREP</title>
 </head>
-<body>
-    <h1>TECHCOMREP</h1>
-    
-    <ul>
-        <li><a href="/pages/clients.html">CLIENTS</a>See Client Pending</li>
-        <li><a href="/index.html">HOME</a></li>
-    </ul>
+<body>  
+    <!--NAV HAMBURGER MENU SECTION -->
+    <nav class="navbar">
+        <h2 class="logo">TECH<span>COMREP</span></h2>
 
-    <ul>
-        <li><a href="/login.html">LOGIN</a></li>
-        <li><a href="/register.html">REGISTER</a></li>
-    </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+            <div class="container" id="navLinksContainer">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/frontend/pages/clients.html">PENDING CLIENTS</a></li>
+                    <li><a href="/frontend/pages/login.html">LOGIN</a></li>
+                    <li><a href="/register.html">REGISTER</a></li>
+                </ul>
+            </div>
+    </nav>
 
+    <!--CONTENT SECTION -->
+    <section class="content">
+        <h1>Welcome to Tech Reports,</h1>
+        <p>Manage field service reports, client machine,<br> 
+           technician records, and technical operations 
+           from one centralized workspace.</p>
+    </section>
+    <script src="/JS/hamburger.js"></script>
 </body>
 </html>
